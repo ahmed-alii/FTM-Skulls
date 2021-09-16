@@ -1,38 +1,158 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body{
+  font-family: 'VT323', monospace;
+  background: url(asstes/BG13.png) repeat-y center;
+  background-size: cover;
+}
+
+.App{
+  max-width: 860px;
+  margin: auto;
+}
+.minted{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+.bluebox{
+  background: #75cdf1;
+  border-radius: 0;
+  border: 4px solid black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+button{
+  font-size: 22px;
+  padding: 10px 20px;
+  font-family: 'VT323', monospace;
+  color: white;
+  background: #75cdf1;
+  border-radius: 0;
+  border: 4px solid black;
+  cursor: pointer;
+}
+.App-header{
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 18px 0;
+}
+.title h1{
+  margin: 0;
+  font-size: 2em;
+}
+.title p{
+  margin: 0;
+}
+.App-header button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+
+.image-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-div{
+  border: 6px solid black;
+  background: rgba(252, 227, 227, 0.47);
+  max-width: 500px;
+  max-height: 500px;
+  min-width: 300px;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+.image-div img{
+  height: 100%;
+  width: 100%;
+}
+
+.mint-select{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 20px;
+}
+.mint-select button{
+  min-width: 120px;
+}
+.purchase-skull{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.para{
+  border: 4px solid black;
   color: white;
+  padding: 20px;
+  margin: 5% 0;
+}
+.para p{
+  margin: 0;
+  line-height: 2em;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.socials{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.socials > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: white;
+  background: black;
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.copyrights{
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  color: lightgrey;
+}
+.socials{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 535px) {
+  .App-header button{
+    position: relative;
+    top: 0;
+    transform: none;
+    right: 0;
+    margin-top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .mint-select{
+    flex-direction: column;
+  }
+  .mint-select button{
+    margin-bottom: 10px;
+  }
+  .minted{
+    justify-content: space-between;
+  }
+  .socials{
+    position: relative;
+    top: 0;
+    transform: none;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 }
